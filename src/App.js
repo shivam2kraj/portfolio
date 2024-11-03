@@ -1,24 +1,64 @@
-import logo from './logo.svg';
 import './App.css';
+import Footer from './components/footer';
+import Navbar from './components/navbar';
+import Sidebar from './components/sidebar';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import HomePage from './pages/homepage';
+import About from './pages/about';
+import ContactPage from './pages/contactpage';
+import ProjectPage from './pages/projectpage';
+import TailwindProject from './pages/tailwindProject';
+import TailwindProjects from './pages/tailwindProjects';
+import TailwindProjects3 from './pages/tailwindProjects3';
+import { ThemeProvider } from './context/themeContext';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider>
+ <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route exact path={'/'} element={
+          <>
+           <HomePage/>
+          </>
+        }/>
+         <Route exact path={'/about'} element={
+          <>
+           <About/>
+          </>
+        }/>
+         <Route exact path={'/contact'} element={
+          <>
+           <ContactPage/>
+          </>
+        }/>
+        <Route exact path={'/project'} element={
+          <>
+           <ProjectPage/>
+          </>
+        }/>
+        <Route exact path={'/project/Tailwind-project'} element={
+          <>
+           <TailwindProject/>
+          </>
+        }/>
+        <Route exact path={'/project/Tailwinds-projects'} element={
+          <>
+           <TailwindProjects/>
+          </>
+        }/>
+          <Route exact path={'/project/Tailwinds-projects3'} element={
+          <>
+           <TailwindProjects3/>
+          </>
+        }/>
+      </Routes>
+      <Sidebar />
+      <Footer />
+    </BrowserRouter>
+    </ThemeProvider>
+   
   );
 }
 
