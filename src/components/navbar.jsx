@@ -31,11 +31,16 @@ function Navbar() {
                     <img src={close} onClick={() => setHamburger(!hamburger)} className="w-[40px]" alt="" />
                     <ul className="flex flex-col gap-[12px]">
                         <li>
-                            {/* <Link onClick={handleClick} to={'/about'}> */}
-                            About
-                            {/* </Link> */}
+                            <Link onClick={handleClick} to={'/about'}>
+                                About
+                            </Link>
                         </li>
-                        <li>Skills</li>
+                        <li>
+                            <Link onClick={handleClick} to={'/services'}>
+                            Services
+                            </Link>
+                        </li>
+
                         <li>Experience</li>
                         <li>
                             {/* <Link onClick={handleClick} to={'/project'}> */}
@@ -64,11 +69,15 @@ function Navbar() {
                 <nav className="flex max-md:hidden items-center gap-[52px]">
                     <ul className="flex gap-[24px]">
                         <li>
-                            {/* <Link onClick={handleClick} to={'/about'}> */}
-                            About
-                            {/* </Link> */}
+                            <Link onClick={handleClick} to={'/about'}>
+                                About
+                            </Link>
                         </li>
-                        <li>Skills</li>
+                        <li>
+                            <Link onClick={handleClick} to={'/services'}>
+                            Services
+                            </Link>
+                        </li>
                         <li>Experience</li>
                         <li>
                             {/* <Link onClick={handleClick} to={'/project'}> */}

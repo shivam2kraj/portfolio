@@ -1,70 +1,140 @@
 import React, { useContext } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import ThemeContext from "../../context/themeContext";
-import shivam from "../../assets/shivam.jpg"
+import shivam from "../../assets/shivam.jpg";
 
 function Section() {
+  const { theme } = useContext(ThemeContext);
 
-    const {theme} = useContext(ThemeContext);
+  // Animation controls for each section
+  const presentControls = useAnimation();
+  const pastControls = useAnimation();
+  const futureControls = useAnimation();
 
-    return (
-        <section className={`${theme === "light" ? "text-black bg-white" : "text-white bg-black"} px-[80px] max-md:px-[40px] max-sm:px-[20px] pt-[51px] pb-[121px] max-md:pb-[51px]`}>
-            <div className="flex gap-[52px] max-md:flex-col max-lg:items-start justify items-center">
-                <img src={shivam} alt="" width={300} className="rounded-[13px]" />
-                <div className="flex flex-col gap-[12px]">
-                    <div className="flex items-end gap-[12px]">
-                        <h1 className="text-[30px] max-[450px]:text-[24px] max-[340px]:text-[20px] max-lg:text-[18px] leading-[120%] font-bold">Name: </h1>
-                        <p className="capitalize text-[24px] leading-[120%] italic">
-                            shivam raj
-                        </p>
-                    </div>
-                    <div className="flex items-end gap-[12px]">
-                        <h1 className="text-[30px] max-[450px]:text-[24px] max-[340px]:text-[20px] max-lg:text-[18px] leading-[120%] font-bold capitalize">date of birth: </h1>
-                        <p className="text-[24px] leading-[120%] italic">
-                            25-01-2000
-                        </p>
-                    </div>
-                    <div className="flex items-end gap-[12px]">
-                        <h1 className="text-[30px] max-[450px]:text-[24px] max-[340px]:text-[20px] max-lg:text-[18px] leading-[120%] font-bold capitalize">highest qualification: </h1>
-                        <p className="capitalize text-[24px] leading-[120%] italic">
-                            mca
-                        </p>
-                    </div>
-                    <div className="flex items-end gap-[12px]">
-                        <h1 className="text-[30px] max-[450px]:text-[24px] max-[340px]:text-[20px] leading-[120%] max-lg:text-[18px] font-bold capitalize">passout year: </h1>
-                        <p className="text-[24px] leading-[120%] italic">
-                            2022
-                        </p>
-                    </div>
-                    <div className="flex items-end gap-[12px]">
-                        <h1 className="text-[30px] max-[450px]:text-[24px] max-[340px]:text-[20px] leading-[120%] max-lg:text-[18px] font-bold capitalize">experience: </h1>
-                        <p className="text-[24px] leading-[120%] italic capitalize">
-                            2 year
-                        </p>
-                    </div>
-                    <div className="flex items-end gap-[12px]">
-                        <h1 className="text-[30px] max-[450px]:text-[24px] max-[340px]:text-[20px] leading-[120%] max-lg:text-[18px] font-bold capitalize">tech stack: </h1>
-                        <p className="text-[24px] leading-[120%] italic capitalize">
-                            reactjs
-                        </p>
-                    </div>
-                </div>
-            </div>
-           <div className="flex justify-start">
-            <p className="capitalize mt-[52px] w-[1024px]">present: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, non impedit ex facilis optio nam similique. Quo deserunt dignissimos beatae dolore soluta? <strong>skill/experience</strong>Enim dolor officia eveniet, facilis, a nihil ipsam praesentium culpa in consectetur, dolorum obcaecati ex sint illo nisi optio dolorem dolores sit ducimus animi explicabo quas eius eaque repellendus! Eius architecto quisquam eos voluptatem totam delectus enim, ipsum veniam provident dolorum voluptate nulla, cumque, ullam inventore pariatur iusto repellat voluptates eligendi magni quo harum? Laborum saepe modi aliquid impedit maiores incidunt illum porro cum assumenda ad quos quibusdam facere sapiente, quaerat nesciunt quia enim, cupiditate minus. Deleniti cupiditate similique ipsum fugit officia dolorum aliquam alias, voluptas delectus sapiente beatae facere et, debitis illo est provident nisi nam tempore consectetur at? Libero, aut corrupti. Minima perferendis ad inventore voluptatibus nulla beatae, vero neque fuga, eveniet vel unde quisquam consequuntur adipisci alias sit a culpa itaque cum quas perspiciatis libero reiciendis quo rem soluta! Numquam quos quidem reprehenderit architecto nam magni unde blanditiis odit eius excepturi quisquam eveniet ex cupiditate natus eum, maxime hic sequi modi libero obcaecati repudiandae nisi iste fuga velit? Itaque ut dolore asperiores quae, consectetur placeat facilis quasi eos amet laboriosam nobis fugit iusto, quisquam natus.
-            </p>
-            </div> 
-             <div className="flex justify-end">
-            <p className="capitalize mt-[52px] w-[1024px]">past: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates delectus harum mollitia labore ab exercitationem temporibus. Perspiciatis obcaecati aut officiis illo animi? Omnis nesciunt beatae iusto doloremque reiciendis rem ullam culpa, ipsam error perspiciatis quos libero ab molestias quisquam assumenda delectus optio corrupti est a! Aliquam amet ducimus optio! Perspiciatis veritatis nulla nobis, quisquam aliquid dolore velit quos vitae alias libero sequi cumque minus doloribus! Assumenda repudiandae eos ratione distinctio, quisquam sint, aut, illo laudantium aliquid iure obcaecati dolorem quos dolor! Esse eaque aut eum in! Officia necessitatibus ipsa dicta fuga consectetur dolorem illum iusto quis. Sint, officiis at. Rerum temporibus quos similique quasi deserunt magni, dignissimos a cupiditate, dicta explicabo exercitationem voluptatem iusto, quaerat consequuntur dolorem ea error odit provident quis! Officiis voluptatem quae quisquam consequuntur impedit nulla molestiae optio voluptatibus ex dolor? Suscipit in saepe perferendis quas placeat minima sed nam voluptatem error quasi inventore sunt natus, quod, consequuntur sapiente commodi sint consequatur incidunt necessitatibus magnam fugiat alias officiis ut nostrum. Explicabo facere voluptates magni deleniti culpa voluptate velit exercitationem aperiam earum rerum assumenda deserunt iusto accusamus eaque nemo quod illum fuga, eligendi impedit magnam dolor corporis, praesentium sequi iste. Mollitia eum repellendus quas vitae voluptates reiciendis deserunt.
-                
-            </p>
-            </div>
-            <div className="flex justify-start">
-            <p className="capitalize mt-[52px] w-[1024px]">future: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, neque expedita. Et aspernatur dicta, quo, debitis corporis obcaecati libero ipsam voluptates dolorem eligendi accusamus illum architecto aperiam eos totam error esse deleniti ad, ex exercitationem. Omnis aliquam, corporis quod alias repellendus non voluptas qui dicta dolor recusandae quas placeat quibusdam possimus voluptatem reprehenderit voluptates eveniet itaque beatae facilis. Ipsam exercitationem tempora ab odit repellendus rem. Officiis illum deleniti, ad deserunt dolore facere mollitia praesentium natus obcaecati soluta quam dolor aliquid magni, alias iusto. Tenetur molestias nemo ab esse, odit sit cumque ipsum eos autem culpa qui, et sed nesciunt, dolores voluptas repellat architecto aspernatur. Consequatur molestias quasi inventore adipisci esse odio fugit quo labore vero amet. Nostrum doloribus quisquam dicta quaerat autem unde mollitia maiores repudiandae deserunt ducimus impedit totam, perspiciatis asperiores in quibusdam maxime reprehenderit temporibus, dolorum voluptatibus vitae non amet? Nihil facere dolorem modi nostrum adipisci, harum soluta facilis qui ex quam veritatis commodi eligendi in? Dicta magnam impedit odio saepe. Soluta quis at delectus sint atque illum nostrum labore. Et maxime harum possimus consequuntur tempore, delectus inventore magni animi optio impedit tenetur. Odio illo error facere, excepturi consequatur culpa quibusdam autem dolorem suscipit doloremque consectetur laboriosam placeat! 
-                </p> 
-                </div> 
-                    
-        </section>
-    )
+  // View triggers for each section
+  const { ref: presentRef, inView: presentInView } = useInView({ threshold: 0.2, triggerOnce: true });
+  const { ref: pastRef, inView: pastInView } = useInView({ threshold: 0.2, triggerOnce: true });
+  const { ref: futureRef, inView: futureInView } = useInView({ threshold: 0.2, triggerOnce: true });
+
+  // Trigger animations when sections come into view
+  React.useEffect(() => {
+    if (presentInView) presentControls.start("visible");
+    if (pastInView) pastControls.start("visible");
+    if (futureInView) futureControls.start("visible");
+  }, [presentControls, pastControls, futureControls, presentInView, pastInView, futureInView]);
+
+  // Animation variants
+  const fadeInVariant = {
+    hidden: { opacity: 0, x: -20 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.6 } },
+  };
+
+  return (
+    <>
+      {/* Main Information Section */}
+
+      <motion.section
+        className={`${theme === "light" ? "text-black bg-[#d9f99d]" : "text-white bg-gray-900"} px-[80px] max-md:px-[40px] max-sm:px-[20px] pt-[51px] pb-[121px] max-md:pb-[51px] rounded-lg shadow-lg`}
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: { opacity: 0 },
+          visible: { opacity: 1, transition: { staggerChildren: 0.3 } },
+        }}
+      >
+        <motion.div className="flex gap-[52px] max-md:flex-col items-center" variants={fadeInVariant}>
+          <motion.div
+            className="relative"
+            style={{ perspective: '1000px' }} // Perspective applied here for a 3D effect
+          >
+
+            <motion.img
+              src={shivam}
+              alt="Shivam"
+              width={300}
+              className="rounded-[13px] transition-all duration-500 shadow-lg"
+              whileHover={{
+                scale: 1.1,
+                rotateY: 15,
+                rotateX: 10,
+                boxShadow: "0px 20px 30px rgba(0, 0, 0, 0.3)",
+              }}
+              style={{
+                transformStyle: "preserve-3d",
+                willChange: "transform, box-shadow",
+              }}
+            />
+          </motion.div>
+          <div className="flex flex-col gap-[12px]">
+            {/* Personal Info */}
+            {[
+              { label: "Name:", value: "Shivam Raj" },
+              { label: "Date of Birth:", value: "25-01-2000" },
+              { label: "Highest Qualification:", value: "MCA" },
+              { label: "Passout Year:", value: "2022" },
+              { label: "Experience:", value: "2 years" },
+              { label: "Tech Stack:", value: "ReactJS" },
+            ].map((info, index) => (
+              <motion.div key={index} className="flex items-end gap-[12px]" variants={fadeInVariant} initial="hidden" animate="visible">
+                <h1 className="text-[30px] font-bold capitalize">{info.label}</h1>
+                <p className="capitalize text-[24px] italic">{info.value}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </motion.section>
+      {/* Present Section */}
+      <motion.section
+        ref={presentRef}
+        initial="hidden"
+        animate={presentControls}
+        variants={fadeInVariant}
+        className={`${theme === "light" ? "text-black bg-[#ddd6fe]" : "text-white bg-[#7c3aed]"} px-[80px] max-md:px-[40px] flex justify-start max-sm:px-[20px] py-[60px] bg-gradient-to-r rounded-lg shadow-lg my-[30px] transition duration-300 hover:shadow-xl`}
+      >
+        <h2 className="text-[36px] font-bold mt-[52px] w-[1024px]">Present</h2>
+        <p className="mt-[20px] text-[20px] leading-[150%]">
+          Building efficient, modern user interfaces with React.js—transforming ideas into seamless, interactive experiences.
+          Latest projects: showcase live applications or demos with responsive design, strong UX, and reusable component architecture.
+        </p>
+      </motion.section>
+
+      {/* Past Section */}
+      <motion.section
+        ref={pastRef}
+        initial="hidden"
+        animate={pastControls}
+        variants={fadeInVariant}
+        className={`${theme === "light" ? "text-black bg-[#f5d0fe]" : "text-white bg-[#c026d3]"} px-[80px] max-md:px-[40px] flex justify-end max-sm:px-[20px] py-[60px] bg-gradient-to-r rounded-lg shadow-lg my-[30px] transition duration-300 hover:shadow-xl`}
+      >
+        <h2 className="text-[36px] mt-[52px] w-[1024px] font-bold">Past</h2>
+        <p className="mt-[20px] text-[20px] leading-[150%]">
+        Every line of code is a step forward, but it's the journey behind it that shapes my expertise.
+        Legacy projects or contributions to applications where you modernized the frontend.
+        </p>
+      </motion.section>
+
+      {/* Future Section */}
+      <motion.section
+        ref={futureRef}
+        initial="hidden"
+        animate={futureControls}
+        variants={fadeInVariant}
+        className={`${theme === "light" ? "text-black bg-[#bae6fd]" : "text-white bg-[#0284c7]"} px-[80px] max-md:px-[40px] flex justify-start max-sm:px-[20px] py-[60px] bg-gradient-to-r rounded-lg shadow-lg my-[30px] transition duration-300 hover:shadow-xl`}
+      >
+        <h2 className="text-[36px] font-bold mt-[52px] w-[1024px]">Future</h2>
+        <p className="mt-[20px] text-[20px] leading-[150%]">
+        Exploring the future of web development to create smarter, faster, and more engaging digital experiences.
+        Goals like mastering React's upcoming features (e.g., new state management, server components).
+        Interest in AI-enhanced interfaces, Web3, or mobile-first progressive web apps (PWAs).
+        Plans for growth, such as contributing to open-source projects or attending React and frontend tech conferences.
+
+        </p>
+      </motion.section>
+    </>
+  );
 }
 
-export default Section
+export default Section;
+
+

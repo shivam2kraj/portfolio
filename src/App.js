@@ -11,12 +11,15 @@ import TailwindProject from './pages/tailwindProject';
 import TailwindProjects from './pages/tailwindProjects';
 import TailwindProjects3 from './pages/tailwindProjects3';
 import { ThemeProvider } from './context/themeContext';
+import Services from './components/skills/service';
+
 
 function App() {
   return (
     <ThemeProvider>
  <BrowserRouter>
       <Navbar />
+      
       <Routes>
         <Route exact path={'/'} element={
           <>
@@ -26,6 +29,11 @@ function App() {
          <Route exact path={'/about'} element={
           <>
            <About/>
+          </>
+        }/>
+        <Route exact path={'/services'} element={
+          <>
+           <Services/>
           </>
         }/>
          <Route exact path={'/contact'} element={
@@ -56,6 +64,7 @@ function App() {
       </Routes>
       <Sidebar />
       <Footer />
+      
     </BrowserRouter>
     </ThemeProvider>
    

@@ -16,7 +16,7 @@ function Section() {
       >
         Want to know more about me.
       </h1>
-      {/* <Link className="max-sm:w-full" to={"/about"}> */}
+      <Link className="max-sm:w-full" to={"/about"}>
         <button
           className={`border-[1px] max-sm:w-full hover:shadow-[0px_0px_20px_grey] transition-all duration-500 ${
             theme === "light" ? "border-black" : "border-white"
@@ -24,7 +24,7 @@ function Section() {
         >
           About
         </button>
-      {/* </Link> */}
+      </Link>
     </section>
   );
 }
