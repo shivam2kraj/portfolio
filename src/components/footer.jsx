@@ -35,7 +35,7 @@ const Footer = () => {
                         <div className="flex flex-col items-center md:items-start">
                             <a href="#" className="text-sm mt-2 hover:underline">Projects</a>
                             <a href="#" className="text-sm hover:underline">Education</a>
-                            <a href="#" className="text-sm hover:underline">Contact</a>
+                            <a href="/contact" className="text-sm hover:underline">Contact</a>
 
                         </div>
                     </div>

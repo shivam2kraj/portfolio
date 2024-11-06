@@ -47,8 +47,8 @@ function Form() {
 
     return (
         <section className="px-[80px] max-md:px-[40px] max-sm:px-[20px] max-sm:pt-[51px] max-lg:pb-[151px] max-lg:flex-col max-lg:gap-[52px] max-lg:items-center bg-black flex justify-between py-[101px]">
-            <h1 className="text-[36px] max-lg:text-center text-white capitalize leading-[120%] font-semibold">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos veniam iure corporis sunt maxime dolor.
+            <h1 className="text-[30px] max-lg:text-center text-white capitalize leading-[120%] font-semibold">
+            Feel free to reach out to me for any questions or opportunities!
             </h1>
             <form className="w-[560px] max-xl:w-[480px] max-md:w-full relative shadow-[0px_0px_20px_#ffffffff] transition-all duration-300 hover:shadow-[0px_0px_60px_#00000033] flex flex-col gap-[20px] bg-[white] px-[20px] py-[24px] rounded-[13px]" action="">
                 <div className="flex max-md:flex-col gap-[20px]">

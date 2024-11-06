@@ -49,9 +49,9 @@ function Navbar() {
                         </li>
                         <li>Education</li>
                         <li>
-                            {/* <Link onClick={handleClick} to={'/contact'}> */}
+                            <Link onClick={handleClick} to={'/contact'}>
                             Contact
-                            {/* </Link> */}
+                            </Link>
                         </li>
 
                     </ul>
@@ -86,9 +86,9 @@ function Navbar() {
                         </li>
                         <li>Education</li>
                         <li>
-                            {/* <Link onClick={handleClick} to={'/contact'}> */}
+                            <Link onClick={handleClick} to={'/contact'}>
                             Contact
-                            {/* </Link> */}
+                            </Link>
                         </li>
                     </ul>
                     <div onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
