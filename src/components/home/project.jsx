@@ -40,7 +40,7 @@ function Project() {
                 {/* Repeated project cards - adjust their content and details as needed */}
                 <div className="w-full sm:w-[45%] lg:w-[31%] hover:scale-105 transition-all duration-300 relative h-auto bg-white rounded-lg px-4 py-6 shadow-lg">
                     <h1 className="text-xl font-semibold mt-2">Portfolio Website</h1>
-                    <p className="truncate">- Developed various screen, included experience, project, about section, and more, while created multiple screens.</p>
+                    <p className="truncate">- Developed various screen, included experience, project, about, section, and more, while created multiple screens.</p>
                     <p className="truncate">- Familiar with popular libraries and tools such as React Router, and gsap, animation.</p>
                     <p className="truncate">- Throughout the development process, maked resuable component.</p>
                     <p className="truncate">- Screens develops utilizing to manage the state using context for dark and light mode, and hover effect like button.</p>

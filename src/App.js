@@ -12,7 +12,7 @@ import TailwindProjects from './pages/tailwindProjects';
 import TailwindProjects3 from './pages/tailwindProjects3';
 import { ThemeProvider } from './context/themeContext';
 import Services from './components/skills/service';
-
+import Education from './components/education/education'
 
 function App() {
   return (
@@ -39,6 +39,11 @@ function App() {
          <Route exact path={'/contact'} element={
           <>
            <ContactPage/>
+          </>
+        }/>
+         <Route exact path={'/education'} element={
+          <>
+           <Education/>
           </>
         }/>
         <Route exact path={'/project'} element={

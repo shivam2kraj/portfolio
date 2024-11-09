@@ -47,7 +47,9 @@ function Navbar() {
                             Projects
                             {/* </Link> */}
                         </li>
-                        <li>Education</li>
+                        <li> <Link onClick={handleClick} to={'/education'}>
+                        Education
+                            </Link></li>
                         <li>
                             <Link onClick={handleClick} to={'/contact'}>
                             Contact
@@ -84,7 +86,9 @@ function Navbar() {
                             Projects
                             {/* </Link> */}
                         </li>
-                        <li>Education</li>
+                        <li> <Link onClick={handleClick} to={'/education'}>
+                        Education
+                            </Link></li>
                         <li>
                             <Link onClick={handleClick} to={'/contact'}>
                             Contact

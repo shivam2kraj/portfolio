@@ -2,6 +2,7 @@
 import React, { useContext } from 'react';
 import { FaLinkedin, FaTwitter, FaFacebook, FaInstagram, FaPhone, FaMailBulk } from 'react-icons/fa';
 import ThemeContext from '../context/themeContext';
+import { Link } from "react-router-dom";
 
 const Footer = () => {
 
@@ -34,7 +35,7 @@ const Footer = () => {
                         </div>
                         <div className="flex flex-col items-center md:items-start">
                             <a href="#" className="text-sm mt-2 hover:underline">Projects</a>
-                            <a href="#" className="text-sm hover:underline">Education</a>
+                            <a href="/education" className="text-sm hover:underline">Education</a>
                             <a href="/contact" className="text-sm hover:underline">Contact</a>
 
                         </div>
@@ -42,7 +43,9 @@ const Footer = () => {
 
                     {/* Social Media Icons */}
                     <div className="flex space-x-4 mt-6 md:mt-0">
+                        <Link to="https://www.linkedin.com/in/shivam-raj-b316621b0">
                         <FaLinkedin className="hover:text-gray-400 cursor-pointer" size={20} />
+                        </Link>
                         <FaTwitter className="hover:text-gray-400 cursor-pointer" size={20} />
                         <FaFacebook className="hover:text-gray-400 cursor-pointer" size={20} />
                         <FaInstagram className="hover:text-gray-400 cursor-pointer" size={20} />
