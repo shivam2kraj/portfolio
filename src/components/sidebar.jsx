@@ -32,17 +32,17 @@ function Sidebar() {
                     }`}
                 >
                     <li>
-                        <a href="https://github.com/shivam2kraj">
+                        <a href="https://github.com/shivam2kraj" target="_blank">
                             <img src={Github} className="bg-white rounded-full" width={30} height={30} alt="GitHub" />
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.linkedin.com/in/shivam-raj-b316621b0">
+                        <a href="https://www.linkedin.com/in/shivam-raj-b316621b0" target="_blank">
                             <img src={Linkedin} className="bg-white rounded-full" width={30} height={30} alt="LinkedIn" />
                         </a>
                     </li>
                     <li>
-                        <a href="https://drive.google.com/file/d/1t9J_y4BVPp0XWOFZflAmSbejmIg6UT_v/view?usp=drive_link">
+                        <a href="https://drive.google.com/file/d/1t9J_y4BVPp0XWOFZflAmSbejmIg6UT_v/view?usp=drive_link" target="_blank">
                             <img src={Resume_icon} className="rounded-full" width={30} height={30} alt="Resume" />
                         </a>
                     </li>
