@@ -42,7 +42,7 @@ function Sidebar() {
                         </a>
                     </li>
                     <li>
-                        <a href="https://drive.google.com/file/d/1t9J_y4BVPp0XWOFZflAmSbejmIg6UT_v/view?usp=drive_link" target="_blank">
+                        <a href="https://drive.google.com/file/d/1kkLlbpHoXSi4UEUKAz9GU-y9Etl-P7bj/view?usp=drive_link" target="_blank">
                             <img src={Resume_icon} className="rounded-full" width={30} height={30} alt="Resume" />
                         </a>
                     </li>
