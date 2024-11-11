@@ -152,6 +152,35 @@
   //   },
   // ];
 
+  export const experiences = [
+    {
+      id: 0,
+      role: "Frontend Developer",
+      company: "Mindflur System Llp",
+      date: "March 2023 - Feb 2024",
+      desc: "Developing various modules, including audit, non-conformance, risk management, and more, while creating multiple screens.",
+      desc1:"Familiar with popular libraries and tools such as Redux, React Router, and Axios, handle routing.",
+      desc2:"Throughout the development process, I have integrated API calls into the UI components, allowing them to fetch and display real-time data from external sources. This has enabled me to create interactive and data-driven UI elements.",
+      desc3:"Screens develops utilizing to manage the state, and handle props.",
+      desc4:"Implemented UI/UX enhancements, including responsive layouts, accessibility features.",
+  
+      skills: [
+        "ReactJS",
+        "JavaScript",
+        "Redux",
+        "HTML5",
+        "CSS3",
+        "Bootstrap",
+        "Restful API",
+        "Webpack",
+        "Flux",
+        "Babel"
+        
+      ],
+    },
+   
+  ];
+  
   export const education = [
     {
       id: 0,

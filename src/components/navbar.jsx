@@ -40,8 +40,12 @@ function Navbar() {
                             Services
                             </Link>
                         </li>
+                        <li>
+                            <Link onClick={handleClick} to={'/experience'}>
+                            Experience
+                            </Link>
+                        </li>
 
-                        <li>Experience</li>
                         <li>
                             {/* <Link onClick={handleClick} to={'/project'}> */}
                             Projects
@@ -80,7 +84,11 @@ function Navbar() {
                             Services
                             </Link>
                         </li>
-                        <li>Experience</li>
+                        <li>
+                            <Link onClick={handleClick} to={'/experience'}>
+                            Experience
+                            </Link>
+                        </li>
                         <li>
                             {/* <Link onClick={handleClick} to={'/project'}> */}
                             Projects

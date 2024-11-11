@@ -13,6 +13,7 @@ import TailwindProjects3 from './pages/tailwindProjects3';
 import { ThemeProvider } from './context/themeContext';
 import Services from './components/skills/service';
 import Education from './components/education/education'
+import Experience from './components/experience/experienceCard';
 
 function App() {
   return (
@@ -34,6 +35,11 @@ function App() {
         <Route exact path={'/services'} element={
           <>
            <Services/>
+          </>
+        }/>
+        <Route exact path={'/experience'} element={
+          <>
+           <Experience/>
           </>
         }/>
          <Route exact path={'/contact'} element={
