@@ -1,6 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import ThemeContext from "../../context/themeContext";
 
 function Form() {
+
+    const {theme} = useContext(ThemeContext);
 
     const [formData, setFormData] = useState({
         FirstName: "",
@@ -46,7 +49,7 @@ function Form() {
     }
 
     return (
-        <section className="px-[80px] max-md:px-[40px] max-sm:px-[20px] max-sm:pt-[51px] max-lg:pb-[151px] max-lg:flex-col max-lg:gap-[52px] max-lg:items-center bg-black flex justify-between py-[101px]">
+        <section className={`px-[80px] max-md:px-[40px] max-sm:px-[20px] max-sm:pt-[51px] max-lg:pb-[151px] max-lg:flex-col max-lg:gap-[52px] max-lg:items-center ${theme === "light" ? "bg-[#a3a3a3]" : "bg-black"} flex justify-between py-[101px]`}>
             <h1 className="text-[30px] max-lg:text-center text-white capitalize leading-[120%] font-semibold">
             Feel free to reach out to me for any questions or opportunities!
             </h1>

@@ -47,9 +47,9 @@ function Navbar() {
                         </li>
 
                         <li>
-                            {/* <Link onClick={handleClick} to={'/project'}> */}
+                            <Link onClick={handleClick} to={'/project'}>
                             Projects
-                            {/* </Link> */}
+                            </Link>
                         </li>
                         <li> <Link onClick={handleClick} to={'/education'}>
                         Education
@@ -90,9 +90,9 @@ function Navbar() {
                             </Link>
                         </li>
                         <li>
-                            {/* <Link onClick={handleClick} to={'/project'}> */}
+                            <Link onClick={handleClick} to={'/project'}>
                             Projects
-                            {/* </Link> */}
+                            </Link>
                         </li>
                         <li> <Link onClick={handleClick} to={'/education'}>
                         Education

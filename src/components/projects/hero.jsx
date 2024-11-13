@@ -8,7 +8,7 @@ function ProjectHero() {
 
     return(
         
-        <main className={`${theme === "light" ? "text-black bg-white" : "text-white bg-black"} 
+        <main className={`${theme === "light" ? "text-black bg-[#78716c]" : "text-white bg-[#0c0a09]"} 
         px-[80px] h-[700px] max-md:px-[40px] max-sm:px-[20px] relative pt-[180px] max-sm:pt-[120px]`}>
             <StyledStarsCanvas/>
             <AnimatePresence>
