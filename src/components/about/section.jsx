@@ -90,15 +90,14 @@ function Section() {
         initial="hidden"
         animate={presentControls}
         variants={fadeInVariant}
-        className={`${theme === "light" ? "text-black bg-[#ddd6fe]" : "text-white bg-[#7c3aed]"} px-[80px] max-md:px-[40px] flex justify-start max-sm:px-[20px] py-[60px] bg-gradient-to-r rounded-lg shadow-lg my-[30px] transition duration-300 hover:shadow-xl`}
+        className={`${theme === "light" ? "text-black bg-[#ddd6fe]" : "text-white bg-[#7c3aed]"} px-[80px] max-md:px-[40px] flex justify-end max-sm:px-[20px] py-[60px] bg-gradient-to-r rounded-lg shadow-lg my-[30px] transition duration-300 hover:shadow-xl`}
       >
-        <h2 className="text-[36px] font-bold mt-[52px] w-[1024px]">Present</h2>
+        <h2 className="text-[36px] mt-[52px] w-[1024px] font-bold">Present</h2>
         <p className="mt-[20px] text-[20px] leading-[150%]">
-          Building efficient, modern user interfaces with React.js—transforming ideas into seamless, interactive experiences.
-          Latest projects: showcase live applications or demos with responsive design, strong UX, and reusable component architecture.
+        Building efficient, modern user interfaces with React.js—transforming ideas into seamless, interactive experiences.
+          Responsive design, strong UX, and reusable component architecture.
         </p>
       </motion.section>
-
       {/* Past Section */}
       <motion.section
         ref={pastRef}
@@ -113,9 +112,20 @@ function Section() {
         Legacy projects or contributions to applications where you modernized the frontend.
         </p>
       </motion.section>
-
-      {/* Future Section */}
       <motion.section
+        ref={futureRef}
+        initial="hidden"
+        animate={futureControls}
+        variants={fadeInVariant}
+        className={`${theme === "light" ? "text-black bg-[#bae6fd]" : "text-white bg-[#0284c7]"} px-[80px] max-md:px-[40px] flex justify-end max-sm:px-[20px] py-[60px] bg-gradient-to-r rounded-lg shadow-lg my-[30px] transition duration-300 hover:shadow-xl`}
+      >
+        <h2 className="text-[36px] mt-[52px] w-[1024px] font-bold">Future</h2>
+        <p className="mt-[20px] text-[20px] leading-[150%]">
+        Exploring the future of web development to create smarter, faster, and more engaging digital experiences, with goals like mastering React’s latest features, AI-enhanced interfaces, Web3, and mobile-first PWAs. Plans for growth include contributing to open-source projects and attending React and frontend tech conferences.
+        </p>
+      </motion.section>
+      {/* Future Section */}
+      {/* <motion.section
         ref={futureRef}
         initial="hidden"
         animate={futureControls}
@@ -130,7 +140,7 @@ function Section() {
         Plans for growth, such as contributing to open-source projects or attending React and frontend tech conferences.
 
         </p>
-      </motion.section>
+      </motion.section> */}
     </>
   );
 }
